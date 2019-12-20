@@ -1,0 +1,4 @@
+country_code -(type:str)Federal Information Processing Standard (FIPS) country/area code
+country_name -(type:str) Country or area name
+year - (type:int)Year of statistics
+midyear_population -(type:int)Both sexes midyear population
