@@ -22,16 +22,18 @@ country_name = df[df['country_name']=="Aruba"]
 
 
 
-"""trace1 = go.Scatter(
-
-
+trace1 = go.Scatter(
+                x = country_name['year'].values,
+                y = country_name['midyear_population'].values,
+                mode = "lines",
+                name = "Aruba"
 
                     )
 
 
 trace2 = go.Pie(
 
-                    )"""
+                    )
 
 trace3 = go.Bar(
                 x = country_name['year'].values,
@@ -47,5 +49,5 @@ layout = dict(
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace3], layout = layout)
+fig = dict(data = [trace1], layout = layout)
 plot(fig)
