@@ -1,0 +1,4 @@
+country_name - назва країни
+year - рік
+population - населення
+age - вік
