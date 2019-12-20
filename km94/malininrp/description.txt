@@ -1,0 +1,4 @@
+country_name - Назва країни
+year - Рік
+infant_mortality - Смертність дітей обох статей
+Life_expectancy - Тривалість життяпри народженні обох статей
