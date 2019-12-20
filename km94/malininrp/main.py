@@ -35,3 +35,13 @@ fig = dict(data = [trace1], layout = layout)
 plot(fig)
 
 
+trace2= go.Scatter(x = aruba_df['year'],
+                    y = aruba_df['infant_mortality']
+                    )
+layout = dict(title = 'Mortality',
+              xaxis= dict(title= 'year'),
+              yaxis=dict(title='infant_mortality'),
+             )
+fig = dict(data = [trace2], layout = layout)
+plot(fig)
+
