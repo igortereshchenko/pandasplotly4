@@ -1,0 +1,4 @@
+1.country_name -- name, what is given to some territory
+2.sex -- gender of person(male or female)
+3.population_age_34 -- people in age of 34(both males and females)
+4.population_age_38 -- people in age of 38(both males and females)
