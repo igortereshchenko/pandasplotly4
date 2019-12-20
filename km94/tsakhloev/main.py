@@ -15,8 +15,13 @@ QUERY = """
 df = bq_assistant.query_to_pandas(QUERY)
 
 Australia = df[ df.country_name == 'Australia']
-
 bar = plotexp.bar( Australia, x = 'year', y = 'infant_mortality',
 	labels = { 'year': 'Year', 'infant_mortality': 'Infant mortality' }, title = 'Australia' )
 
-bar.show()
+Year = df[ df.year == 1996 ]
+scatter = plotexp.scatter( Year, x = 'infant_mortality', y = 'life_expectancy',
+	labels = { 'infant_mortality': 'Infant mortality', 'life_expectancy': 'Life expectancy' },
+	text = 'country_name', title = 'Infant mortality and life expectancy in 1996' )
+scatter.update_traces( textposition = 'top center' )
+
+scatter.show()
