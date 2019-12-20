@@ -27,6 +27,11 @@ trace1 = go.Scatter(
     y = df['gross_reproduction_rate']
 
                     )
+trace2 = go.Pie(
+    values=df['sex_ratio_at_birth'],
+    labels=df['year']
+
+                    )
 
 
 
@@ -40,8 +45,15 @@ layout1 = dict(
               xaxis= dict(title= 'Year'),
               yaxis=dict(title='Gross reproduction'),
              )
+layout2 = dict(
+              title = 'sex ratio at birth',
+              xaxis= dict(title= 'Year'),
+              yaxis=dict(title='sex_ratio_at_birth'),
+             )
 
 fig1 = dict(data = [trace1], layout = layout1)
+fig2 = dict(data = [trace2], layout = layout2)
 
 plot(fig1)
+plot(fig2)
 
