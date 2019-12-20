@@ -25,3 +25,5 @@ bar.show()
 scatter = pe.scatter(df[df.crude_death_rate<10], x= "year", y="crude_death_rate", labels = {"year": "Year","crude_death_rate":"Crude death rate <10"})
 scatter.show()
 
+pie = pe.pie(df[df.crude_death_rate>13],values="crude_death_rate", names = "country_code", labels= {"crude_death_rate":"crude death rate","country_code":"country code"}, title = "Country, where crude_death_rate>13")
+pie.show()
