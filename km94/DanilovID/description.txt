@@ -1,0 +1,4 @@
+1.country_cod -  Federal Information Processing Standard (FIPS) country/area code
+2. year - year
+3. crude_birth_rate - Crude birth rate (births per 1,000 population)
+4.crude_death_rate - Crude death rate (deaths per 1,000 population)
