@@ -19,6 +19,10 @@ QUERY = """
 df = bq_assistant.query_to_pandas(QUERY)
 
 
+labels= df['year']
+values = df['growth_rate']
+fig2 = go.Figure(data=[go.Pie(labels=labels, values=values)])
+plot(fig2)
 
 
 trace3 = go.Bar(x = df['country_name'], y = df['growth_rate'])
