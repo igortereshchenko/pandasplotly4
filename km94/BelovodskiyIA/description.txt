@@ -1,0 +1,4 @@
+country_name – назва країни
+year – рік
+midyear_population_male – населення чоловіків
+midyear_population_female – населення жінок
