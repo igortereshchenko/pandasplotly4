@@ -27,3 +27,6 @@ Population = df[df.population == 19]
 scatter = px.scatter(Population, y = 'country_name', x = 'year', labels = {'country_name': 'Країна', 'year': 'Рік'}, title = 'Країна|Рік, де популяція = 19')
 scatter.show()
 
+Age = df[df.age >= 90]
+pie = px.pie(Age, values = 'year', names = 'country_name', labels = {'year': 'Рік', 'country_name': 'Назви'}, title = 'Країни з жителями, віком > 90 по населенню')
+pie.show()
