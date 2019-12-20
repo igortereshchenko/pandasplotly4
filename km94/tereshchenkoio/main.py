@@ -47,9 +47,9 @@ trace3 = go.Bar(
 data = [trace1]
 
 layout = dict(
-              title = '',
-              xaxis= dict(title= ''),
-              yaxis=dict(title=''),
+              title = 'Riding',
+              xaxis= dict(title= 'year'),
+              yaxis=dict(title='midyear_population'),
              )
-fig = dict(data = [trace2], layout = layout)
+fig = dict(data = [trace1,trace3], layout = layout)
 plot(fig)
