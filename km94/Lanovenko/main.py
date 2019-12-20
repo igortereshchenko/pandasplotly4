@@ -18,9 +18,22 @@ QUERY = """
 
 df = bq_assistant.query_to_pandas(QUERY)
 
+trace1 = go.Scatter(
+    x=df['year'],
+    y=df['midyear_population_male'],
+    mode='lines',
+)
+
 trace3 = go.Bar(
     x=df['year'],
     y=df['midyear_population'],
+)
+
+
+layout_scatter = dict(
+              title='Середня популяція чоловіків відносно року',
+              xaxis=dict(title= 'Рік'),
+              yaxis=dict(title='Популяція чоловіків'),
 )
 
 layout_bar = dict(
@@ -29,6 +42,8 @@ layout_bar = dict(
               yaxis=dict(title='Загальна популяція'),
 )
 
+fig_scatter = dict(data=[trace1], layout=layout_scatter)
 fig_bar = dict(data=[trace3], layout=layout_bar)
 
+plot(fig_scatter)
 plot(fig_bar)
