@@ -22,3 +22,8 @@ print(df)
 Nauru = df[df.country_name == 'Nauru']
 bar = px.bar(Nauru, x = 'year', y = 'population', labels = {'year': 'Рік', 'population': 'Популяція'}, title = 'Популяція Nauru')
 bar.show()
+
+Population = df[df.population == 19]
+scatter = px.scatter(Population, y = 'country_name', x = 'year', labels = {'country_name': 'Країна', 'year': 'Рік'}, title = 'Країна|Рік, де популяція = 19')
+scatter.show()
+
