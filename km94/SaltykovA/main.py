@@ -38,4 +38,11 @@ layout = dict(title = 'population',
 fig = dict(data = [trace2], layout = layout)
 plot(fig)
 
+trace3 = go.Pie(labels=year_df['year'], values=year_df['population'])
 
+layout = dict(title = 'population',
+              xaxis= dict(title= 'year'),
+              yaxis=dict(title='population'),
+             )
+fig = dict(data = [trace3], layout = layout)
+plot(fig)
