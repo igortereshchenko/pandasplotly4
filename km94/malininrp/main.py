@@ -45,3 +45,12 @@ layout = dict(title = 'Mortality',
 fig = dict(data = [trace2], layout = layout)
 plot(fig)
 
+trace3 = go.Pie(labels=aruba_df['year'], values=aruba_df['infant_mortality'])
+
+layout = dict(title = 'Mortality',
+              xaxis= dict(title= 'year'),
+              yaxis=dict(title='infant_mortality'),
+             )
+
+fig = dict(data = [trace3], layout = layout)
+plot(fig)
