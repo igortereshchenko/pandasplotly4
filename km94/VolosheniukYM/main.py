@@ -15,7 +15,6 @@ QUERY = """
         LIMIT 10000
         """
 
-
 df = bq_assistant.query_to_pandas(QUERY)
 
 Infant_mortality = df[df.infant_mortality >= 150]
@@ -41,12 +40,6 @@ trace2 = go.Scatter(
                     text=Armenia.country_name)
 
 
-
-trace3 = go.Pie(
-
-                    )
-
-
 data = [trace1]
 
 layout = dict(
@@ -64,4 +57,13 @@ layout = dict(
              )
 fig = go.Figure(data=[trace2], layout=layout)
 plot(fig)
+
+df1 = df[df['year'] == 1991]
+labels = df1['country_name']
+values = df1['infant_mortality']
+
+
+trace3 = go.Figure(data=[go.Pie(labels=labels, values=values)])
+plot(trace3)
+
 
