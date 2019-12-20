@@ -26,3 +26,9 @@ scatter = plot.scatter(Year, x = 'sex', y = 'max_age',
                        text = 'country_name', title = 'Max age in 1981')
 scatter.update_traces(textposition = 'top senter')
 scatter.show()
+
+Max_age = df[df.max_age >= 95]
+pie = plot.pie(Max_age, values = 'max_age', names = 'country_name',
+               labels = {'max_age': 'Max age', 'country_name': 'Country'},
+               title = 'Max age in countries where it is bigger or equal to 95')
+pie.show()
