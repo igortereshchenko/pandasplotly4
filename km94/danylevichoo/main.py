@@ -29,7 +29,8 @@ trace1 = go.Scatter(
 
 
 trace2 = go.Pie(
-
+    labels=serbia['year'],
+    values=serbia['midyear_population']
 
                     )
 
@@ -48,5 +49,5 @@ layout = dict(
               xaxis= dict(title= 'Population'),
               yaxis=dict(title='year'),
              )
-fig = dict(data = [trace1], layout = layout)
+fig = dict(data = [trace2], layout = layout)
 plot(fig)
