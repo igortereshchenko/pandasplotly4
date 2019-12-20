@@ -1,0 +1,4 @@
+country-code - (type:str) - code of country (SI)
+country-name - (type:str) - name of country (Serbia)
+year - (type:int) - year
+midyear_population - (type:int) - population of people 
