@@ -19,10 +19,13 @@ QUERY = """
 df = bq_assistant.query_to_pandas(QUERY)
 
 
+df1 = df[df['country_name']=='Aruba']
+x = df1['year']
+y = df1['midyear_population']
 
+trace1 = go.Scatter( x=x,
+                     y=y,
+                     mode = "lines")
 
-df3 = df[df['country_name']=='Aruba']
-
-trace3 = go.Bar(x = df3['year'], y = df3['midyear_population'])
-fig = go.Figure(data = [trace3])
-plot(fig)
+fig1 = dict(data = [trace1])
+plot(fig1)
