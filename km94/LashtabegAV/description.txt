@@ -1,0 +1,4 @@
+country_name - Country or area name
+sex - gender
+year - year
+max_age - the last age in the distribution with a value greater than zero
