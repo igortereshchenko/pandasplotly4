@@ -32,6 +32,8 @@ trace1 = go.Scatter(
 
 
 trace2 = go.Pie(
+                labels = country_name['year'],
+                values = country_name['midyear_population'].values
 
                     )
 
@@ -42,12 +44,12 @@ trace3 = go.Bar(
 
 )
 
-"""data = [trace1]"""
+data = [trace1]
 
 layout = dict(
               title = '',
               xaxis= dict(title= ''),
               yaxis=dict(title=''),
              )
-fig = dict(data = [trace1], layout = layout)
+fig = dict(data = [trace2], layout = layout)
 plot(fig)
