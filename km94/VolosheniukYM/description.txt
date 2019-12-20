@@ -1,0 +1,4 @@
+year - year of calendar
+infant mortality - how often babies die
+country name - the name of country
+life excpectancy - the excpectancy of life
