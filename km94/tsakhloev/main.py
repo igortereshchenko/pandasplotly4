@@ -24,4 +24,9 @@ scatter = plotexp.scatter( Year, x = 'infant_mortality', y = 'life_expectancy',
 	text = 'country_name', title = 'Infant mortality and life expectancy in 1996' )
 scatter.update_traces( textposition = 'top center' )
 
-scatter.show()
+Mortality = df[ df.infant_mortality >= 120 ]
+pie = plotexp.pie( Mortality, values = 'infant_mortality', names = 'country_name',
+	labels = { 'infant_mortality': 'Infant mortality', 'country_name': 'Country' },
+	title = 'Infant mortality in countries where it is bigger or equal to 120' )
+
+pie.show()
