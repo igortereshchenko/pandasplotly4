@@ -18,6 +18,12 @@ QUERY = """
 
 df = bq_assistant.query_to_pandas(QUERY)
 
+trace1 =go.Scatter(
+        x= df['year'],
+        y= df['rate_natural_increase'],
+        mode='lines')
+fig3 = dict(data = [trace1])
+plot(fig3)
 
 labels= df['year']
 values = df['growth_rate']
