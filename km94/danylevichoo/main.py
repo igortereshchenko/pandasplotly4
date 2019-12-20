@@ -23,7 +23,8 @@ df = bq_assistant.query_to_pandas(QUERY)
 serbia=df[df['country_name']=='Aruba']
 
 trace1 = go.Scatter(
-
+    x=serbia['year'],
+    y=serbia['midyear_population']
     )
 
 
@@ -47,5 +48,5 @@ layout = dict(
               xaxis= dict(title= 'Population'),
               yaxis=dict(title='year'),
              )
-fig = dict(data = [trace3], layout = layout)
+fig = dict(data = [trace1], layout = layout)
 plot(fig)
