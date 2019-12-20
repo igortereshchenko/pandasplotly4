@@ -24,6 +24,11 @@ trace1 = go.Scatter(
     mode='lines',
 )
 
+trace2 = go.Pie(
+    labels=df['midyear_population_female'],
+    values=df['year']
+)
+
 trace3 = go.Bar(
     x=df['year'],
     y=df['midyear_population'],
@@ -36,6 +41,10 @@ layout_scatter = dict(
               yaxis=dict(title='Популяція чоловіків'),
 )
 
+layout_pie = dict(
+              title='Середня популяція жінок відносно року',
+)
+
 layout_bar = dict(
               title='Популяція населення відносно',
               xaxis=dict(title= 'Рік'),
@@ -43,7 +52,9 @@ layout_bar = dict(
 )
 
 fig_scatter = dict(data=[trace1], layout=layout_scatter)
+fig_pie = dict(data=[trace2], layout=layout_pie)
 fig_bar = dict(data=[trace3], layout=layout_bar)
 
 plot(fig_scatter)
+plot(fig_pie)
 plot(fig_bar)
