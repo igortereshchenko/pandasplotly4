@@ -34,8 +34,9 @@ trace2 = go.Pie(
                     )
 
 
-
-
+trace3 = go.Bar(
+    x = df['year'],
+    y = df['total_fertility_rate']
 )
 
 data = [trace1]
@@ -50,10 +51,16 @@ layout2 = dict(
               xaxis= dict(title= 'Year'),
               yaxis=dict(title='sex_ratio_at_birth'),
              )
+layout3 = dict(
+              title = 'total fertility rate',
+              xaxis= dict(title= 'Year'),
+              yaxis=dict(title='total_fertility_rate'),
+             )
 
 fig1 = dict(data = [trace1], layout = layout1)
 fig2 = dict(data = [trace2], layout = layout2)
-
+fig3 = dict(data = [trace3], layout = layout3)
 plot(fig1)
 plot(fig2)
+plot(fig3)
 
