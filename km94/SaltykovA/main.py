@@ -27,3 +27,15 @@ fig = dict(data = [trace1], layout = layout)
 plot(fig)
 
 
+trace2= go.Scatter(x = year_df['age'],
+                    y = year_df['population']
+                    )
+
+layout = dict(title = 'population',
+              xaxis= dict(title= 'age'),
+              yaxis=dict(title='population'),
+             )
+fig = dict(data = [trace2], layout = layout)
+plot(fig)
+
+
