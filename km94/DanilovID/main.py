@@ -22,3 +22,6 @@ df = bq_assistant.query_to_pandas(QUERY)
 bar = pe.bar(df[df.crude_birth_rate>=30], x= "year", y="crude_birth_rate", labels = {"year": "Year","crude_birth_rate": "crude birth rate"}, title = "crude birth rate>=30")
 bar.show()
 
+scatter = pe.scatter(df[df.crude_death_rate<10], x= "year", y="crude_death_rate", labels = {"year": "Year","crude_death_rate":"Crude death rate <10"})
+scatter.show()
+
