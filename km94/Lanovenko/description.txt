@@ -1,0 +1,4 @@
+year - Year
+midyear_population - Both sexes midyear population in the age group
+midyear_population_male - Male midyear population in the age group
+midyear_population_female - Female midyear population in the age group
