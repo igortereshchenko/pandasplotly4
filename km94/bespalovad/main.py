@@ -22,3 +22,8 @@ bar.show()
 Aruba_s = df[df.year == 2001]
 pie = plot.pie(Aruba_s, x = 'year', y = 'sex', label = {'year': 'Year', 'sex': 'Sex'}, title = 'Aruba sex difference in 2001')
 pie.show()
+
+Aruba_ma_s = df[df.country_name == 'Aruba']
+scatter = plot.scatter(Aruba_ma_s, x = 'year', y = 'max_age', label = {'year': 'Year', 'max_age': 'Max_age'}, title = 'Aruba max age per year')
+scatter.show()
+
