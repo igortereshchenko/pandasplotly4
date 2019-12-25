@@ -1,0 +1,4 @@
+country_name: country name of sample
+year: year of sample
+sex: sex of sample
+max_age: maximum age of sample year
